@@ -1,0 +1,2 @@
+chmod 755 /home/user
+docker run --rm --volume $(pwd):/src --volume /home/user/owdata:/usr/share/dependency-check/data --volume $(pwd)/owreport:/report owasp/dependency-check --scan /src --format "ALL" --project "My OWASP Dependency Check Project" --out /report
